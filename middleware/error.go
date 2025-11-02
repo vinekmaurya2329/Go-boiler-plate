@@ -29,7 +29,7 @@ func GlobalErrorHandler() gin.HandlerFunc {
 		// Recover from any panic
 		defer func() {
 			if err := recover(); err != nil {
-				// Log the stack trace (useful for debugging)
+				
 				fmt.Println("Panic recovered:", err)
 				debug.PrintStack()
 

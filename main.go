@@ -3,10 +3,13 @@ package main
 import (
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"boilerplate/db"
 	"boilerplate/middleware"
+
+	"github.com/gin-gonic/gin"
 )
 func main (){
+	db.ConnectDB()
  r:= gin.Default()
  r.Use(middleware.JSONBodyMiddleware())
 // Add logger + recovery middleware
